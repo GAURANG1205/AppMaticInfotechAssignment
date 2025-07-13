@@ -8,14 +8,14 @@ The app displays a grid of products fetched from a live API (`https://fakestorea
 
 ##  Screens Implemented
 
-- ✅ **Home Screen** – Grid view of products
-- ✅ **Product Detail Screen** – View product description and add to cart
-- ✅ **Cart Screen** – List of cart items, remove option, and total price
-- ✅ **Cart Icon Badge** – Dynamic item count on app bar
+-  **Home Screen** – Grid view of products
+-  **Product Detail Screen** – View product description and add to cart
+-  **Cart Screen** – List of cart items, remove option, and total price
+-  **Cart Icon Badge** – Dynamic item count on app bar
 
 ---
 
-## 🧠 Approach Used
+##  Approach Used
 
 - **State Management:**  
   - Used `Cubit` (via `flutter_bloc`) **only for Product Listing**
@@ -24,12 +24,12 @@ The app displays a grid of products fetched from a live API (`https://fakestorea
 
 - **Folder Structure:**
 - lib/
-├── Logic/ # Cubits and States
-├── Models/ # Product Model and Global Cart List
-├── Screens/ # All UI Screens
-├── Common/ # Common Scaffold Message
+ - ├── Logic/ # Cubits and States
+ - ├── Models/ # Product Model and Global Cart List
+ - ├── Screens/ # All UI Screens
+ - ├── Common/ # Common Scaffold Message
 
-## 📦 Packages / Libraries Used
+##  Packages / Libraries Used
 
 | Package                | Purpose                                 |
 |------------------------|------------------------------------------|
@@ -43,3 +43,6 @@ dependencies:
 flutter_bloc: ^8.1.3
 cached_network_image: ^3.3.1
 http: ^0.13.5
+
+### Challenges
+-One challenge was balancing simplicity and architecture. I intentionally avoided using Cubit or Provider for the cart to keep the app lightweight, but this made UI syncing more manual (like refreshing badge count).
