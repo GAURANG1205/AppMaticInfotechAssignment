@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               IconButton(
                 icon: const Icon(Icons.shopping_cart),
-                onPressed: (){
+                onPressed: ()  {
                 },
               ),
           const SizedBox(width: 12),
