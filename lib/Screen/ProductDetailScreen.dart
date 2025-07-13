@@ -1,5 +1,6 @@
 import 'package:appmaticassignment/Common/customScaffoldMessage.dart';
 import 'package:flutter/material.dart';
+import '../Models/globalCart.dart';
 import '../Models/ProductModel.dart';
 
 
@@ -26,6 +27,7 @@ class ProductDetailScreen extends StatelessWidget {
               icon: const Icon(Icons.add_shopping_cart),
               label: const Text("Add to Cart"),
               onPressed: () {
+                globalCart.add(product);
            ScaffoldMessage.showSnackBar(context, message: "Added to Cart",isError: false);
               },
             )
