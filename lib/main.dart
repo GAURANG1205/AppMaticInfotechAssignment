@@ -1,3 +1,4 @@
+import 'package:appmaticassignment/Screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,13 +17,13 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<ProductCubit>(
-          create: (context) => ProductCubit()..fetchProducts(),
+          create: (context) => ProductCubit(),
         ),
       ],
       child: MaterialApp(
         title: 'Shopping App',
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: SplashScreen(),
       ),
     );
   }
